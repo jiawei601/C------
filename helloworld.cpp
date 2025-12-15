@@ -20,5 +20,5 @@ int main(int argc, char* argv[])：用于接收命令行参数，argc 是参数�
     
     */
     std::cout << "This program is compiled with C++14 standard." << std::endl;
-    return 0;
+    return 02555;
 }
