@@ -1,6 +1,16 @@
 #include <iostream>
 // 引入输入输出流库，让程序可以进行屏幕输出等操作
 // 主函数，程序的入口点，所有C++程序都必须有且仅有一个main函数
+
+
+
+namespace first_space{
+    int x = 5;
+}
+
+namespace second_space{
+    double x = 3.14;
+}
 int main() {
     //std:: 表示这些内容属于标准命名空间
     std::cout << "Hello, World!"<< std::endl;
@@ -38,5 +48,36 @@ int main(int argc, char* argv[])：用于接收命令行参数，argc 是参数�
     
     */
     std::cout << "This program is compiled with C++14 standard." << std::endl;
+    using namespace first_space;
+
+    using std::string;
+    using std::cout;
+    
+
+    //int x=42;
+    
+    double y=3.14;
+    int sum =  x+y; // 
+    char grade = 'A';
+    string school = "WHUT";
+    std::string name = "23456Alice";
+    bool isStudent = true;
+
+    
+
+    cout<<"inner x:"<<x<<'\n'<<"first_space x:" <<first_space::x <<'\n'<<"second_space x:"<< second_space::x <<'\n';
+    cout<<y<<'\n';
+
+    std::cout << "The answer is: " << sum << std::endl;
+    std::cout<< "Grade: " << grade << std::endl;
+    std::cout<< "School: " << school <<'\n'<< "name:"<<name<<std::endl;
+    std::cout<< "Is student: " << std::boolalpha << isStudent << std::endl;
+
+    const double PI = 3.14159;
+    double radius = 5.0;
+    double area = PI * radius * radius;
+    std::cout << "radius: " << radius <<"cm"<< " area: " << area <<"cm^2"<< std::endl;
+
+    
     return 0;
 }
